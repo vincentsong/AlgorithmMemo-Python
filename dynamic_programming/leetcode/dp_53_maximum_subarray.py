@@ -17,8 +17,10 @@
 
 from typing import List
 
+
 class Solution53:
-    def maxSubArray(self, nums: List[int]) -> int:
+    @staticmethod
+    def max_sub_array(nums: List[int]) -> int:
         ans = nums[0]
         sum = 0
         for n in nums:

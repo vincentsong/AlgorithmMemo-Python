@@ -23,16 +23,16 @@
 
 # https://leetcode-cn.com/problems/climbing-stairs
 
-from typing import List
 
 class Solution70:
-    def climbStairs(self, n: int) -> int:
+    @staticmethod
+    def climb_stairs(n: int) -> int:
         if n < 3:
             return n
         # climb 1 or 2 stairs
         dp1, dp2 = 1, 2
         ans = 0
-        for _ in range(3, n+1):
+        for _ in range(3, n + 1):
             # each step is the sum of previous steps
             ans = dp1 + dp2
             dp1, dp2 = dp2, ans
